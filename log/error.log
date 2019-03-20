@@ -1,0 +1,28 @@
+time:2019-03-20 03:48:49,506 	 levelname:ERROR 
+ msg:Traceback (most recent call last):
+  File "E:\www\newscrapy\product\run.py", line 21, in scrapy_product
+    Product().operate()
+  File "E:\www\newscrapy\product\controller\product.py", line 52, in operate
+    self.set_export_page()
+  File "E:\www\newscrapy\product\controller\product.py", line 73, in set_export_page
+    self.click_element('//*[@id="main"]/div[1]/div[1]/div[2]/div[1]/div[8]/button')
+  File "<decorator-gen-2>", line 2, in click_element
+  File "E:\Program Files (x86)\Python\lib\site-packages\retry\api.py", line 74, in retry_decorator
+    logger)
+  File "E:\Program Files (x86)\Python\lib\site-packages\retry\api.py", line 33, in __retry_internal
+    return f()
+  File "E:\www\newscrapy\product\core\browser.py", line 55, in click_element
+    self.get_element(xpath).click()
+  File "E:\Program Files (x86)\Python\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "E:\Program Files (x86)\Python\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "E:\Program Files (x86)\Python\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\Program Files (x86)\Python\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">...</button> is not clickable at point (1611, 164). Other element would receive the click: <div class="loading_large" style="display: block;">...</div>
+  (Session info: chrome=70.0.3538.67)
+  (Driver info: chromedriver=70.0.3538.67 (9ab0cfab84ded083718d3a4ff830726efd38869f),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+
